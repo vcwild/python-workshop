@@ -1,0 +1,74 @@
+[build-system]
+# hatchling pinned for reproducibility: version should be kept up-to-date
+requires = [
+    "hatchling>=1.4.1",
+    "hatch-vcs",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "workshop"
+description = "A guided tour to modern Python development"
+readme = "README.md"
+license = { text = "MIT OR Apache-2.0" }
+requires-python = ">=3.7"
+authors = [
+  { email = "vwildner@redhat.com" },
+]
+keywords = [
+  "workshop",
+  "tutorial",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Topic :: Software Development",
+]
+dependencies = [
+  "httpx",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "pytest",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/docs",
+  "/examples",
+  "/tests",
+  "/tuf",
+  "/requirements*.txt",
+  "/tox.ini",
+  "/setup.py",
+]
+
+[tool.hatch.build.targets.wheel]
+# The testing phase changes the current working directory to `tests` but the test scripts import
+# from `tests` so the root directory must be added to Python's path for editable installations
+dev-mode-dirs = ["."]
+
+# Read more here: https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
+[tool.black]
+line-length=88
+
+# Read more here: https://pycqa.github.io/isort/docs/configuration/config_files.html
+[tool.isort]
+profile="black"
+line_length=88
+
+[tool.hatch.version]
+raw-options.version_scheme = "calver-by-date"
+source = "vcs"

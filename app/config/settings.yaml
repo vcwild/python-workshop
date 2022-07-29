@@ -1,0 +1,4 @@
+data:
+  questions:
+    type: csv
+    path: app/data/questions.csv
