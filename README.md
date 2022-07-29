@@ -14,7 +14,7 @@ Some of the topics we will cover are:
 - What is Python?
 - Why learn Python in 2022?
 - Why Python is so popular?
-- What features Python has that other languages don't have?
+- What features Python has that other languages simply don't have?
 - How to get started with the language?
   - Setting up your environment
   - The Python REPL
@@ -34,22 +34,37 @@ Some of the topics we will cover are:
 
 ## [Advanced topics](#advanced-topics)
 
-- What is "modern Python"?
 - Language ergonomics
   - Static vs dynamic typing
+- What is "modern Python"?
 - Modern Python syntax
   - Python typing
   - Static code analysis
-- REPL driven development
-- How to keep your project secrets safe
 
 ## [Backlog](#backlog)
 
-- Metaprogramming
-- Code quality
-  - Linters
-    - [Black](https://black.readthedocs.io/en/stable/)
-    - [Isort](https://isort.readthedocs.io/en/latest/)
-  - Unit testing
-  - Pre-commit hooks
+### [Meta-programming](#meta-programming)
+
+- [The Python data model](https://docs.python.org/3/reference/datamodel.html)
+- [Python iterators](https://docs.python.org/3/c-api/iterator.html)
+- [Python context managers](https://docs.python.org/3/reference/datamodel.html#context-managers)
+- [Python metaclasses](https://docs.python.org/3/reference/datamodel.html#metaclasses)
+- [Python decorators](https://docs.python.org/3/reference/datamodel.html#decorators)
+- [Python generators](https://docs.python.org/3/reference/datamodel.html#generators)
+- [Python closures](https://docs.python.org/3/reference/datamodel.html#closures)
+- [Python coroutines](https://docs.python.org/3/reference/datamodel.html#coroutines)
+
+### [Development workflow](#development-workflow)
+
+- REPL driven development
+- Linters
+  - [Black](https://black.readthedocs.io/en/stable/)
+  - [Isort](https://isort.readthedocs.io/en/latest/)
 - Continuous integration
+- Testing
+  - Unit testing
+  - Functional testing
+  - Integration testing
+  - End-to-end testing
+- Pre-commit hooks
+- How to keep your project secrets safe
