@@ -12,9 +12,7 @@ Some of the topics we will cover are:
 ## [Getting started](#getting-started)
 
 - What is Python?
-- Why learn Python in 2022?
 - Why Python is so popular?
-- What features Python has that other languages simply don't have?
 - How to get started with the language?
   - Setting up your environment
   - The Python REPL
