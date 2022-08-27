@@ -9,7 +9,7 @@ def capture_args() -> list[str]:
         index = sys.argv.index(arg)
         acum.append(f"arg[{index}] = {arg}")
 
-    return (acum)
+    return acum
 
 def main():
     args = capture_args()
