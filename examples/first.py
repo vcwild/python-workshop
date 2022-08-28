@@ -1,19 +1,22 @@
 #!/usr/bin/python3
 
-import sys
+from sys import argv
 
-def capture_args() -> list[str]:
-    acum = []
+def show_msg():
+    print("Hello, this is your first program!")
 
-    for arg in sys.argv:
-        index = sys.argv.index(arg)
-        acum.append(f"arg[{index}] = {arg}")
+def show_help(args):
+    for arg in args:
+        if arg in "--help":
+            show_msg()
+            return True
 
-    return acum
+    return False
 
 def main():
-    args = capture_args()
-    print(args)
+    ask_for_help = show_help(argv)
+    if not ask_for_help:
+        print(argv)
 
 if __name__ == "__main__":
     main()
