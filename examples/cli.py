@@ -2,6 +2,7 @@
 
 from sys import argv
 
+
 def handle_arguments(args: list[str]) -> bool:
     """Handles the arguments passed to the program.
 
@@ -25,9 +26,11 @@ def handle_arguments(args: list[str]) -> bool:
 
     return False
 
+
 def main() -> None:
     status = handle_arguments(argv)
     exit(status)
+
 
 if __name__ == "__main__":
     main()
