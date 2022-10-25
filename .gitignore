@@ -168,4 +168,3 @@ cython_debug/
 # Other
 
 .secrets*.yaml
-app/data/

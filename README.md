@@ -15,6 +15,12 @@ Some of the topics we will cover are:
   - The Python REPL
   - Writing a Python program
 
+## [Requirements](#requirements)
+
+- Python 3.10 or higher
+- A text editor or IDE of your choice
+- [Pre-commit hooks](https://pre-commit.com/) installed
+
 ## [Workshop](#workshop)
 
 - Python functionalities
@@ -39,19 +45,6 @@ Some of the topics we will cover are:
   - Python typing
   - Static code analysis
 
-## [Backlog](#backlog)
-
-### [Meta-programming](#meta-programming)
-
-- [The Python data model](https://docs.python.org/3/reference/datamodel.html)
-- [Python iterators](https://docs.python.org/3/c-api/iterator.html)
-- [Python context managers](https://docs.python.org/3/reference/datamodel.html#context-managers)
-- [Python metaclasses](https://docs.python.org/3/reference/datamodel.html#metaclasses)
-- [Python decorators](https://docs.python.org/3/reference/datamodel.html#decorators)
-- [Python generators](https://docs.python.org/3/reference/datamodel.html#generators)
-- [Python closures](https://docs.python.org/3/reference/datamodel.html#closures)
-- [Python coroutines](https://docs.python.org/3/reference/datamodel.html#coroutines)
-
 ### [Development workflow](#development-workflow)
 
 - REPL driven development
@@ -66,3 +59,17 @@ Some of the topics we will cover are:
   - End-to-end testing
 - Pre-commit hooks
 - How to keep your project secrets safe
+
+## References
+
+- [The Python data model](https://docs.python.org/3/reference/datamodel.html)
+- [Black formatter](https://black.readthedocs.io/en/stable/)
+- [Dynaconf](https://dynaconf.readthedocs.io/en/latest/)
+- [Isort formatter](https://isort.readthedocs.io/en/latest/)
+- [Packaging Python projects](https://packaging.python.org/tutorials/packaging-projects/)
+- [Python metaclasses](https://docs.python.org/3/glossary.html#term-metaclass)
+- [Python typing](https://docs.python.org/3/library/typing.html)
+- [Structural pattern matching](https://peps.python.org/pep-0636/)
+- [The Python Context manager](https://docs.python.org/3/glossary.html#term-context-manager)
+- [The Python implicit iterator](https://docs.python.org/3/glossary.html#term-iterator)
+- [Python generators](https://docs.python.org/3/glossary.html#term-generator)

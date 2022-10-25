@@ -1,23 +1,14 @@
 [build-system]
 # hatchling pinned for reproducibility: version should be kept up-to-date
-requires = [
-    "hatchling>=1.4.1",
-    "hatch-vcs",
-]
 build-backend = "hatchling.build"
+requires = [
+  "hatchling",
+  "hatch-vcs",
+]
 
 [project]
-name = "workshop"
-description = "A guided tour to modern Python development"
-readme = "README.md"
-license = { text = "MIT OR Apache-2.0" }
-requires-python = ">=3.7"
 authors = [
-  { email = "vwildner@redhat.com" },
-]
-keywords = [
-  "workshop",
-  "tutorial",
+  {email = "vwildner@redhat.com"},
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -35,13 +26,23 @@ classifiers = [
 dependencies = [
   "httpx",
 ]
+description = "A guided tour to modern Python development"
 dynamic = ["version"]
+keywords = [
+  "workshop",
+  "tutorial",
+]
+license = {text = "MIT"}
+name = "workshop"
+readme = "README.md"
+requires-python = ">=3.10"
 
 [project.optional-dependencies]
 dev = [
-    "black",
-    "isort",
-    "pytest",
+  "black",
+  "isort",
+  "ipdb",
+  "ipython",
 ]
 
 [tool.hatch.build.targets.sdist]
@@ -62,12 +63,12 @@ dev-mode-dirs = ["."]
 
 # Read more here: https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
 [tool.black]
-line-length=88
+line-length = 88
 
 # Read more here: https://pycqa.github.io/isort/docs/configuration/config_files.html
 [tool.isort]
-profile="black"
-line_length=88
+line_length = 88
+profile = "black"
 
 [tool.hatch.version]
 raw-options.version_scheme = "calver-by-date"
